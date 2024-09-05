@@ -104,6 +104,6 @@ button:hover {
 
 @media (max-width: 600px) {
     section {
-        width: 70%;
+        width: 50%;
     }
 }
