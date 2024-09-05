@@ -101,9 +101,3 @@ button:hover {
     transform: scale(1.05);
     /* 鼠标悬停时按钮略微放大 */
 }
-
-@media (max-width: 700px) {
-    section {
-        margin: 10px 10px;
-    }
-}
