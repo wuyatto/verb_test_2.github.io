@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #4CA1AF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C4E0E5, #4CA1AF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+section {
+    text-align: center;
+    background-image:
+        radial-gradient(circle 506px at 50.6% 16.5%,
+            rgba(239, 252, 250, 1) 5.5%, rgba(154, 192, 206, 1) 100.2%);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#circles {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin: 5px 5px 0;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.circle.active {
+    transform: scale(1.2);
+    background-color: skyblue;
+    box-shadow: 0 0 10px rgba(135, 206, 250, 0.8);
+}
+
+.circle.completed {
+    background-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    /* 添加发光效果 */
+}
+
+#practice-view {
+    margin: 10px 100px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#chinese-meaning {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.wrong-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('icon/wrong.ico') no-repeat center center;
+    background-size: contain;
+}
+
+.correct-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('icon/correct.ico') no-repeat center center;
+    background-size: contain;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: skyblue;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.2s;
+}

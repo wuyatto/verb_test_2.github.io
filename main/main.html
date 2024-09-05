@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不规则动词</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon/feather.ico">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <section>
+        <div id="practice-view" class="hidden">
+            <h1>不规则动词</h1>
+            <div id="circles">
+                <!-- JavaScript 将会动态生成10个小圆圈 -->
+            </div>
+            <p id="word-counter">1 / 10</p> <!-- 显示当前单词是第几个 -->
+            <div id="input-container">
+                <p id="chinese-meaning">中文释义</p> <!-- 中文释义 -->
+
+                <div class="input-wrapper">
+                    <input type="text" id="base-form" placeholder="请输入动词原形">
+                    <span class="wrong-icon"></span>
+                    <span class="correct-icon"></span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="third-person" placeholder="请输入单数第三人称">
+                    <span class="wrong-icon"></span>
+                    <span class="correct-icon"></span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="past-tense" placeholder="请输入过去式">
+                    <span class="wrong-icon"></span>
+                    <span class="correct-icon"></span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="past-participle" placeholder="请输入过去分词">
+                    <span class="wrong-icon"></span>
+                    <span class="correct-icon"></span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="present-participle" placeholder="请输入现在分词">
+                    <span class="wrong-icon"></span>
+                    <span class="correct-icon"></span>
+                </div>
+            </div>
+
+            <button id="submit">提交</button>
+        </div>
+    </section>
+
+    <p id="feedback"></p> <!-- 反馈信息 -->
+</body>
+
+</html>
