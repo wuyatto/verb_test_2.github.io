@@ -119,10 +119,6 @@ function displayWord() {
         document.getElementById("word-counter").textContent = `${currentIndex + 1} / ${selectedWords.length}`;
         document.getElementById("feedback").textContent = "";
         updateCircles(currentIndex, 5);
-    } else {
-        document.getElementById(inputs[0]).blur();
-        document.getElementById("feedback").innerHTML = "恭喜你，成功通关！";
-        document.getElementById("feedback").style.color = "green";
     }
 }
 
@@ -173,6 +169,9 @@ function checkAnswer() {
         if (correctNumber !== selectedWords.length) {
             submit.textContent = "下一个";
         } else {
+            document.getElementById(inputs[0]).blur();
+            document.getElementById("feedback").innerHTML = "恭喜你，成功通关！";
+            document.getElementById("feedback").style.color = "green";
             submit.textContent = "继续练习";
         }
 
